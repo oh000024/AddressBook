@@ -2,13 +2,8 @@
 require("./main.scss"); 
 const _contacts = require("../data/contacts").contacts;
 
-// function capitalName(name) {
-//     return name.substr(0, 1).toUpperCase() + name.substr(1).toLowerCase();
-// }
-
 function changeName(fullname) {
     return fullname.split(" ").map(function (i) {
-        // return capitalName(i);
         return (i.substr(0, 1).toUpperCase() + i.substr(1).toLowerCase());
     }).join(" ");
 }
