@@ -32,14 +32,15 @@ let ProfileDetail = React.createClass({
         } else{
             return (
             React.createElement("div",{ className: "details" },
-                React.createElement("h1",{},changeName(this.props.contact.name.first+" "+(this.props.contact.name.last))),
+                React.createElement("h1",{},changeName(this.props.contact.name.first+" "+(this.props.contact.name.last))), 
                 React.createElement("div",{},
                     React.createElement("div",{},"Gender: "+this.props.contact.gender),
                     React.createElement("div", {},"DOB: "+this.props.contact.dob+" ("+getAge(this.props.contact.dob)+" years old)")),
                 React.createElement("hr", {}),
-                    React.createElement("address",{},(this.props.contact.location.street)),
-                    React.createElement("br"),React.createElement("p", {},(this.props.contact.location.city)+", "+(this.props.contact.location.state)),
-                    React.createElement("br"), React.createElement("p",{},this.props.contact.location.postcode),
+                    React.createElement("address",{},(this.props.contact.location.street),
+                    React.createElement("br"),
+										(this.props.contact.location.city)+", "+(this.props.contact.location.state),
+										React.createElement("br"),this.props.contact.location.postcode),
                 React.createElement("hr", {}),
                 React.createElement("div",{},
                     React.createElement("div",{},"Email: ",
@@ -52,6 +53,7 @@ let ProfileDetail = React.createClass({
             }
         }
     });
+
 
 let ContactItem = React.createClass({
     propTypes:{

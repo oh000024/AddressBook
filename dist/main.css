@@ -23,7 +23,7 @@ body {
   cursor: pointer;
   width: 100%; }
 
-.contact :hover {
+.contact:hover {
   background-color: goldenrod; }
 
 ul {
