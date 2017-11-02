@@ -1,0 +1,43 @@
+body {
+  height: 100%; }
+
+.title {
+  width: 100%;
+  font-size: 3em;
+  font-weight: bold; }
+
+.column {
+  float: left;
+  padding: 10px; }
+
+.column.list {
+  width: 30%;
+  height: 100%;
+  overflow: scroll; }
+
+.column.details {
+  width: 70%; }
+
+.contact .row {
+  display: inline-block;
+  cursor: pointer;
+  width: 100%; }
+
+.contact :hover {
+  background-color: goldenrod; }
+
+ul {
+  list-style-type: none; }
+
+.infobox {
+  width: 200px; }
+  .infobox .message {
+    border: 1px solid red; }
+    .infobox .message .title {
+      color: red; }
+  .infobox .user {
+    border: 2px solid black; }
+    .infobox .user .title {
+      color: black; }
+
+/*# sourceMappingURL=main.css.map*/
