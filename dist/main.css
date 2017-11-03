@@ -2,9 +2,11 @@ body {
   height: 100%; }
 
 .title {
-  width: 100%;
+  width: 99%;
   font-size: 3em;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: center;
+  border: solid black 1px; }
 
 .column {
   float: left;
@@ -16,7 +18,8 @@ body {
   overflow: scroll; }
 
 .column.details {
-  width: 70%; }
+  width: 70%;
+  clear: both; }
 
 .contact .row {
   display: inline-block;

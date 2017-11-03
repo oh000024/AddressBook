@@ -70,42 +70,13 @@
 "use strict";
 
 
-//import Title from "./Title";
 var Title = __webpack_require__(1);
-
 var ProfileDetail = __webpack_require__(2);
-
-// var ContactItem = require("./contactItem.js");
-
 var ProfileList = __webpack_require__(4);
 
 __webpack_require__(6);
 
 var _contacts = __webpack_require__(7).contacts;
-
-// let ContactItem = React.createClass({
-//     propTypes:{
-//         id: React.PropTypes.number,
-//         picture:React.PropTypes.object.isRequired,
-//         name: React.PropTypes.object.isRequired,
-//         dob: React.PropTypes.string.isRequired,
-//         onClick: React.PropTypes.func.isRequired
-//     },
-//     render: function(){
-//         return (
-//             React.createElement("li",{className:"contact",onClick:this.props.onClick,id:"contact-"+this.props.id},
-//                 React.createElement("div",{className:"row"},
-//                    React.createElement("div",{className:"column pic"},
-//                        React.createElement("img",{src: this.props.picture.thumbnail})),
-//                     React.createElement("div",{className:"column data"},this.props.name.first+" "+this.props.name.last,
-//                     React.createElement("br"),
-//                     React.createElement("p",{},this.props.dob.split(" ")[0]))
-//                 )
-//             )
-//         )
-//     }
-// });
-
 
 var Main = React.createClass({
     displayName: "Main",
@@ -119,6 +90,7 @@ var Main = React.createClass({
         return React.createElement("div", { className: "row" }, React.createElement(Title, {}), React.createElement("div", {}, React.createElement(ProfileList, { contacts: this.props.contactList, selectContact: this.props.selectContact }), React.createElement(ProfileDetail, { contact: this.props.contact })));
     }
 });
+
 var state = {};
 var contactList = _contacts;
 var isSelect = true;

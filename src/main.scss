@@ -3,10 +3,11 @@ body {
 }
   
   .title {
-    width: 100%;
+    width: 99%;
     font-size: 3em;
     font-weight: bold;
-    // border: solid black 1px; 
+	text-align: center;
+     border: solid black 1px; 
 }
   
   .column {
@@ -22,6 +23,7 @@ body {
     }
     .column.details {
       width: 70%; 
+		clear: both;
     }
   
   .contact {
