@@ -1,4 +1,4 @@
-module.exports.contacts = [{
+export const contacts = [{
     "gender": "male",
     "name": {"title": "mr", "first": "daniel", "last": "williams"},
     "location": {"street": "6366 duke st", "city": "kingston", "state": "northwest territories", "postcode": 90447},
