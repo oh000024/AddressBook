@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -264,9 +264,9 @@ process.umask = function () {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(19);
-} else {
   module.exports = __webpack_require__(20);
+} else {
+  module.exports = __webpack_require__(21);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
@@ -494,11 +494,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(30)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(31)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(31)();
+  module.exports = __webpack_require__(32)();
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
@@ -890,7 +890,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(21);
+var isTextNode = __webpack_require__(22);
 
 /*eslint-disable no-bitwise */
 
@@ -997,7 +997,34 @@ module.exports = getActiveElement;
 "use strict";
 
 
-var _reactDom = __webpack_require__(17);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+function capitalize(fullname) {
+    return fullname.split(" ").map(function (i) {
+        return i.substr(0, 1).toUpperCase() + i.substr(1).toLowerCase();
+    }).join(" ");
+}
+
+function getAge(dob) {
+    var birthday = new Date(dob);
+    var diff = Date.now() - birthday.getTime();
+    var ageDate = new Date(diff);
+    return Math.abs(ageDate.getFullYear() - 1970);
+}
+
+exports.capitalize = capitalize;
+exports.getAge = getAge;
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1005,7 +1032,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Main = __webpack_require__(32);
+var _Main = __webpack_require__(33);
 
 var _Main2 = _interopRequireDefault(_Main);
 
@@ -1028,7 +1055,7 @@ function onSelected(e) {
 function setState(changes) {
     state = Object.assign({}, state, changes);
     state.selectContact = onSelected;
-    _reactDom2.default.render(_react2.default.createElement(_Main2.default, { contactList: state.contactList, selectContact: onSelected, contact: state.contact }), document.getElementById("react-app"));
+    _reactDom2.default.render(_react2.default.createElement(_Main2.default, { contactList: state.contactList, selectContact: state.selectContact, contact: state.contact }), document.getElementById("react-app"));
     contact = undefined;
 }
 
@@ -1055,7 +1082,7 @@ window.addEventListener("hashchange", function () {
 setState({ contactList: _contacts.contacts, contact: contact });
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1090,14 +1117,14 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(18);
+  module.exports = __webpack_require__(19);
 } else {
-  module.exports = __webpack_require__(23);
+  module.exports = __webpack_require__(24);
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3497,7 +3524,7 @@ var ek = { createPortal: dk, hydrate: function hydrate(a, b, c) {
   unstable_deferredUpdates: Xj.deferredUpdates, flushSync: Xj.flushSync, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: { EventPluginHub: Jb, EventPluginRegistry: sa, EventPropagators: Th, ReactControlledComponent: nb, ReactDOMComponentTree: G, ReactDOMEventListener: L } };Cj({ findFiberByHostInstance: G.getClosestInstanceFromNode, findHostInstanceByFiber: Xj.findHostInstance, bundleType: 0, version: "16.0.0", rendererPackageName: "react-dom" });module.exports = ek;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3627,7 +3654,7 @@ module.exports = { Children: { map: S.map, forEach: S.forEach, count: S.count, t
     } }, Component: B.Component, PureComponent: B.PureComponent, unstable_AsyncComponent: B.AsyncComponent, createElement: G.createElement, cloneElement: G.cloneElement, isValidElement: G.isValidElement, createFactory: G.createFactory, version: "16.0.0", __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: { ReactCurrentOwner: C, assign: f } };
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5330,7 +5357,7 @@ if (process.env.NODE_ENV !== "production") {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5345,7 +5372,7 @@ if (process.env.NODE_ENV !== "production") {
  * @typechecks
  */
 
-var isNode = __webpack_require__(22);
+var isNode = __webpack_require__(23);
 
 /**
  * @param {*} object The object to check.
@@ -5358,7 +5385,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5389,7 +5416,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5400,7 +5427,7 @@ module.exports = isNode;
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var react=__webpack_require__(1);var invariant=__webpack_require__(3);var ExecutionEnvironment=__webpack_require__(10);var _assign=__webpack_require__(4);var EventListener=__webpack_require__(11);var require$$0=__webpack_require__(7);var hyphenateStyleName=__webpack_require__(24);var emptyFunction=__webpack_require__(2);var camelizeStyleName=__webpack_require__(26);var performanceNow=__webpack_require__(28);var propTypes=__webpack_require__(5);var emptyObject=__webpack_require__(6);var checkPropTypes=__webpack_require__(8);var shallowEqual=__webpack_require__(12);var containsNode=__webpack_require__(13);var focusNode=__webpack_require__(14);var getActiveElement=__webpack_require__(15);/**
+ */var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj;}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};if(process.env.NODE_ENV!=="production"){(function(){'use strict';var react=__webpack_require__(1);var invariant=__webpack_require__(3);var ExecutionEnvironment=__webpack_require__(10);var _assign=__webpack_require__(4);var EventListener=__webpack_require__(11);var require$$0=__webpack_require__(7);var hyphenateStyleName=__webpack_require__(25);var emptyFunction=__webpack_require__(2);var camelizeStyleName=__webpack_require__(27);var performanceNow=__webpack_require__(29);var propTypes=__webpack_require__(5);var emptyObject=__webpack_require__(6);var checkPropTypes=__webpack_require__(8);var shallowEqual=__webpack_require__(12);var containsNode=__webpack_require__(13);var focusNode=__webpack_require__(14);var getActiveElement=__webpack_require__(15);/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -8794,7 +8821,7 @@ if(/^(https?|file):$/.test(protocol)){console.info('%cDownload the React DevTool
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8809,7 +8836,7 @@ if(/^(https?|file):$/.test(protocol)){console.info('%cDownload the React DevTool
 
 
 
-var hyphenate = __webpack_require__(25);
+var hyphenate = __webpack_require__(26);
 
 var msPattern = /^ms-/;
 
@@ -8836,7 +8863,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8872,7 +8899,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8887,7 +8914,7 @@ module.exports = hyphenate;
 
 
 
-var camelize = __webpack_require__(27);
+var camelize = __webpack_require__(28);
 
 var msPattern = /^-ms-/;
 
@@ -8915,7 +8942,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8950,7 +8977,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8965,7 +8992,7 @@ module.exports = camelize;
  * @typechecks
  */
 
-var performance = __webpack_require__(29);
+var performance = __webpack_require__(30);
 
 var performanceNow;
 
@@ -8987,7 +9014,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9013,7 +9040,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9538,7 +9565,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9597,7 +9624,7 @@ module.exports = function () {
 };
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9617,15 +9644,15 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Title = __webpack_require__(33);
+var _Title = __webpack_require__(34);
 
 var _Title2 = _interopRequireDefault(_Title);
 
-var _profilelist = __webpack_require__(34);
+var _profilelist = __webpack_require__(35);
 
 var _profilelist2 = _interopRequireDefault(_profilelist);
 
-var _detailprofile = __webpack_require__(36);
+var _detailprofile = __webpack_require__(37);
 
 var _detailprofile2 = _interopRequireDefault(_detailprofile);
 
@@ -9676,7 +9703,7 @@ Main.protoTypes = {
 };
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9726,7 +9753,7 @@ var Title = function (_Component) {
 exports.default = Title;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9746,7 +9773,7 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _contactItem = __webpack_require__(35);
+var _contactItem = __webpack_require__(36);
 
 var _contactItem2 = _interopRequireDefault(_contactItem);
 
@@ -9781,6 +9808,7 @@ var ProfileList = function (_Component) {
                     " ",
                     this.props.contacts.map(function (i) {
                         return _react2.default.createElement(_contactItem2.default, {
+                            key: i.key,
                             id: i.id,
                             picture: i.picture,
                             name: i.name,
@@ -9803,7 +9831,7 @@ ProfileList.propTypes = {
 };
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9822,6 +9850,8 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _util = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9858,7 +9888,7 @@ var ContactItem = function (_Component) {
                     _react2.default.createElement(
                         "div",
                         { className: "column data" },
-                        this.props.name.first + " " + this.props.name.last,
+                        (0, _util.capitalize)(this.props.name.first + " " + this.props.name.last),
                         _react2.default.createElement("br", null),
                         _react2.default.createElement(
                             "p",
@@ -9877,6 +9907,7 @@ var ContactItem = function (_Component) {
 exports.default = ContactItem;
 
 ContactItem.protoTypes = {
+    key: _propTypes2.default.number,
     id: _propTypes2.default.number,
     picture: _propTypes2.default.object.isRequired,
     name: _propTypes2.default.object.isRequired,
@@ -9885,7 +9916,7 @@ ContactItem.protoTypes = {
 };
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9905,7 +9936,7 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _util = __webpack_require__(37);
+var _util = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9942,7 +9973,7 @@ var ProfileDetail = function (_Component) {
                         "h1",
                         null,
                         " ",
-                        (0, _util.changeName)(this.props.contact.name.first + " " + this.props.contact.name.last)
+                        (0, _util.capitalize)(this.props.contact.name.first + " " + this.props.contact.name.last)
                     ),
                     _react2.default.createElement(
                         "div",
@@ -9951,7 +9982,7 @@ var ProfileDetail = function (_Component) {
                             "div",
                             null,
                             "Gender: ",
-                            this.props.contact.gender
+                            (0, _util.capitalize)(this.props.contact.gender)
                         ),
                         _react2.default.createElement(
                             "div",
@@ -9968,13 +9999,13 @@ var ProfileDetail = function (_Component) {
                         "div",
                         null,
                         " ",
-                        this.props.contact.location.street,
+                        (0, _util.capitalize)(this.props.contact.location.street),
                         " ",
                         _react2.default.createElement("br", null),
                         " ",
-                        this.props.contact.location.city,
+                        (0, _util.capitalize)(this.props.contact.location.city),
                         ", ",
-                        this.props.contact.location.state,
+                        (0, _util.capitalize)(this.props.contact.location.state),
                         _react2.default.createElement("br", null),
                         this.props.contact.location.postcode
                     ),
@@ -10016,33 +10047,6 @@ exports.default = ProfileDetail;
 ProfileDetail.protoTypes = {
     contact: _propTypes2.default.object
 };
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-function changeName(fullname) {
-    return fullname.split(" ").map(function (i) {
-        return i.substr(0, 1).toUpperCase() + i.substr(1).toLowerCase();
-    }).join(" ");
-}
-
-function getAge(dob) {
-    var birthday = new Date(dob);
-    var diff = Date.now() - birthday.getTime();
-    var ageDate = new Date(diff);
-    return Math.abs(ageDate.getFullYear() - 1970);
-}
-
-exports.changeName = changeName;
-exports.getAge = getAge;
 
 /***/ }),
 /* 38 */

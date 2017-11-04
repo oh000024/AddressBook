@@ -6,20 +6,22 @@ body {
   font-size: 3em;
   font-weight: bold;
   text-align: center;
-  border: solid black 1px; }
+  border: solid black 1px;
+  background-color: aquamarine; }
 
 .column {
   float: left;
   padding: 10px; }
-
-.column.list {
-  width: 30%;
-  height: 100%;
-  overflow: scroll; }
-
-.column.details {
-  width: 70%;
-  clear: both; }
+  .column .list {
+    width: 30%;
+    height: 100%;
+    overflow: scroll; }
+  .column .details {
+    width: 70%;
+    clear: both; }
+  .column .data p {
+    margin-top: 4px;
+    margin-bottom: 2px; }
 
 .contact .row {
   display: inline-block;
@@ -27,7 +29,7 @@ body {
   width: 100%; }
 
 .contact:hover {
-  background-color: goldenrod; }
+  background-color: #A6F8BE; }
 
 ul {
   list-style-type: none; }
