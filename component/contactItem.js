@@ -21,6 +21,7 @@ export default class ContactItem extends Component{
     }
 }
 ContactItem.protoTypes = {
+		key: PropTypes.number,
         id: PropTypes.number,
         picture:PropTypes.object.isRequired,
         name: PropTypes.object.isRequired,

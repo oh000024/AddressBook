@@ -13,13 +13,13 @@ export default class ProfileList extends Component{
                 <ul> {
                     this.props.contacts.map(i =>
                     < ContactItem 
+					key = {i.key}
                     id = {i.id} 
-                    picture={i.picture} 
+                    picture = {i.picture} 
                     name = {i.name} 
-                    dob={i.dob} 
-                    onClick= {this.props.selectContact}/>) 
+                    dob = {i.dob} 
+                    onClick = {this.props.selectContact}/>) 
                     }
-
                 </ul>
                 </div>
         );
