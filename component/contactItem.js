@@ -1,6 +1,7 @@
 
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import {capitalize, getAge} from "./util.js";
 
 export default class ContactItem extends Component{
     render(){
@@ -11,7 +12,7 @@ export default class ContactItem extends Component{
                    <div className="column pic">
                        <img src= {this.props.picture.thumbnail}/>
                    </div>
-                        <div className="column data">{this.props.name.first+" "+this.props.name.last}
+                        <div className="column data">{capitalize(this.props.name.first+" "+this.props.name.last)}
                             <br/>
                             <p>{this.props.dob.split(" ")[0]}</p>
                         </div>

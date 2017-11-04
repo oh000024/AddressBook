@@ -1,5 +1,5 @@
 
-function changeName(fullname) {
+function capitalize(fullname) {
     return fullname.split(" ").map(function (i) {
         return (i.substr(0, 1).toUpperCase() + i.substr(1).toLowerCase());
     }).join(" ");
@@ -12,4 +12,4 @@ function getAge(dob) {
     return Math.abs(ageDate.getFullYear() - 1970);
 }
 
-export { changeName, getAge };
+export { capitalize, getAge };
