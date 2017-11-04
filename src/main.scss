@@ -16,16 +16,22 @@ body {
     padding: 10px; 
     // background-color: blue;
     // border: solid gray;
-}
-    .column.list {
+.list {
       width: 30%;
       height: 100%;
       overflow: scroll; 
     }
-    .column.details {
+    .details {
       width: 70%; 
 		clear: both;
     }
+	 .data {
+		 p{
+			 margin-top: 4px;
+			 margin-bottom: 2px;
+		 }
+	  }
+}
   
   .contact {
       .row {
