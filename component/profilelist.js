@@ -6,22 +6,19 @@ import ContactItem from "./contactItem"
 export default class ProfileList extends Component{
 
     render(){
-
+		let basicinfo = this.props.contacts.map((item) => (
+		< ContactItem 
+					key = {item.key}
+                    id = {item.id} 
+                    picture = {item.picture} 
+                    name = {item.name} 
+                    dob = {item.dob} 
+                    onClick = {this.props.selectContact}/>
+		));
         return(
-
             <div className="column list">
-                <ul> {
-                    this.props.contacts.map(i =>
-                    < ContactItem 
-					key = {i.key}
-                    id = {i.id} 
-                    picture = {i.picture} 
-                    name = {i.name} 
-                    dob = {i.dob} 
-                    onClick = {this.props.selectContact}/>) 
-                    }
-                </ul>
-                </div>
+                <ul> {basicinfo}</ul>
+            </div>
         );
 
     }
