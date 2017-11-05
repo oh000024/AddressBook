@@ -1,7 +1,7 @@
 
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Title from "./Title"
+import Title from "./title"
 import ProfileList from "./profilelist"
 import ProfileDetail from "./profile"
 

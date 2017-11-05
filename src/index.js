@@ -18,7 +18,6 @@ function setState(changes) {
     state = Object.assign({}, state, changes);
     state.selectContact = onSelected;
     ReactDOM.render(<Main contactList={state.contactList} selectContact={state.selectContact} contact = {state.contact}/>, document.getElementById("react-app"));
-    //contact=undefined;
 }
 					
 window.addEventListener("hashchange", ()=>{
