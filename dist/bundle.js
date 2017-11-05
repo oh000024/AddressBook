@@ -1059,15 +1059,6 @@ function setState(changes) {
     //contact=undefined;
 }
 
-//var contact=undefined;
-//if (location.hash.split("/").includes("contact")) {
-//    var id = location.hash.split("/");
-//    id = id[id.length - 1];
-//    var contact = contacts.find(function (i) {
-//        return i.id == id;
-//    });
-//}
-
 window.addEventListener("hashchange", function () {
 
     if (location.hash.split("/").includes("contact")) {
@@ -9652,9 +9643,9 @@ var _profilelist = __webpack_require__(35);
 
 var _profilelist2 = _interopRequireDefault(_profilelist);
 
-var _detailprofile = __webpack_require__(37);
+var _profile = __webpack_require__(37);
 
-var _detailprofile2 = _interopRequireDefault(_detailprofile);
+var _profile2 = _interopRequireDefault(_profile);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9684,7 +9675,7 @@ var Main = function (_Component) {
                     "div",
                     null,
                     _react2.default.createElement(_profilelist2.default, { contacts: this.props.contactList, selectContact: this.props.selectContact }),
-                    _react2.default.createElement(_detailprofile2.default, { contact: this.props.contact })
+                    _react2.default.createElement(_profile2.default, { contact: this.props.contact })
                 )
             );
         }

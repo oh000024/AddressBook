@@ -1,9 +1,10 @@
 
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Title from "../component/Title"
-import ProfileList from "../component/profilelist"
-import ProfileDetail from "../component/detailprofile"
+import Title from "./Title"
+import ProfileList from "./profilelist"
+import ProfileDetail from "./profile"
+
 export default class Main extends Component{
     render(){
         return (

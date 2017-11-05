@@ -20,16 +20,7 @@ function setState(changes) {
     ReactDOM.render(<Main contactList={state.contactList} selectContact={state.selectContact} contact = {state.contact}/>, document.getElementById("react-app"));
     //contact=undefined;
 }
-    
-//var contact=undefined;
-//if (location.hash.split("/").includes("contact")) {
-//    var id = location.hash.split("/");
-//    id = id[id.length - 1];
-//    var contact = contacts.find(function (i) {
-//        return i.id == id;
-//    });
-//}
-
+					
 window.addEventListener("hashchange", ()=>{
 
     if (location.hash.split("/").includes("contact")) {
