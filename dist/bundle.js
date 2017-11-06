@@ -9897,7 +9897,7 @@ var ContactItem = function (_Component) {
 
 exports.default = ContactItem;
 
-ContactItem.protoTypes = {
+ContactItem.propTypes = {
     key: _propTypes2.default.number,
     id: _propTypes2.default.number,
     picture: _propTypes2.default.object.isRequired,
@@ -10035,7 +10035,7 @@ var ProfileDetail = function (_Component) {
 exports.default = ProfileDetail;
 
 
-ProfileDetail.protoTypes = {
+ProfileDetail.propTypes = {
     contact: _propTypes2.default.object
 };
 

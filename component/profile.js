@@ -33,6 +33,6 @@ export default class ProfileDetail extends Component{
         }
     }
 
-    ProfileDetail.protoTypes = {
+    ProfileDetail.propTypes = {
         contact: PropTypes.object 
     }
