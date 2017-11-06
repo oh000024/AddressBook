@@ -31,4 +31,4 @@ window.addEventListener("hashchange", ()=>{
     }
     setState({contact:contact});   
 });
-    setState({ contactList: contacts, contact: undefined });
+setState({ contactList: contacts, contact: undefined });

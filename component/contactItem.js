@@ -5,9 +5,9 @@ import {capitalize, getAge} from "./util.js";
 
 export default class ContactItem extends Component{
     render(){
-        let liid = "contact-"+this.props.id;
+//        let id = "contact-"+this.props.id;
         return (
-            <li className="contact" onClick={this.props.onClick} id={liid}>
+            <li className="contact" onClick={this.props.onClick} id={"contact-"+this.props.id}>
                 <div className="row">
                    <div className="column pic">
                        <img src= {this.props.picture.thumbnail}/>
