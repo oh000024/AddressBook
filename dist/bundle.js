@@ -1056,7 +1056,6 @@ function setState(changes) {
     state = Object.assign({}, state, changes);
     state.selectContact = onSelected;
     _reactDom2.default.render(_react2.default.createElement(_Main2.default, { contactList: state.contactList, selectContact: state.selectContact, contact: state.contact }), document.getElementById("react-app"));
-    //contact=undefined;
 }
 
 window.addEventListener("hashchange", function () {
@@ -9635,9 +9634,9 @@ var _propTypes = __webpack_require__(5);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Title = __webpack_require__(34);
+var _title = __webpack_require__(34);
 
-var _Title2 = _interopRequireDefault(_Title);
+var _title2 = _interopRequireDefault(_title);
 
 var _profilelist = __webpack_require__(35);
 
@@ -9670,7 +9669,7 @@ var Main = function (_Component) {
             return _react2.default.createElement(
                 "div",
                 { className: "row" },
-                _react2.default.createElement(_Title2.default, null),
+                _react2.default.createElement(_title2.default, null),
                 _react2.default.createElement(
                     "div",
                     null,
@@ -9790,6 +9789,15 @@ var ProfileList = function (_Component) {
         value: function render() {
             var _this2 = this;
 
+            var basicinfo = this.props.contacts.map(function (item) {
+                return _react2.default.createElement(_contactItem2.default, {
+                    key: item.key,
+                    id: item.id,
+                    picture: item.picture,
+                    name: item.name,
+                    dob: item.dob,
+                    onClick: _this2.props.selectContact });
+            });
             return _react2.default.createElement(
                 "div",
                 { className: "column list" },
@@ -9797,15 +9805,7 @@ var ProfileList = function (_Component) {
                     "ul",
                     null,
                     " ",
-                    this.props.contacts.map(function (i) {
-                        return _react2.default.createElement(_contactItem2.default, {
-                            key: i.key,
-                            id: i.id,
-                            picture: i.picture,
-                            name: i.name,
-                            dob: i.dob,
-                            onClick: _this2.props.selectContact });
-                    })
+                    basicinfo
                 )
             );
         }
